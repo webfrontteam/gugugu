@@ -7,8 +7,10 @@
     "pages/logs/logs",
     "pages/party/homepage/homepage",
     "pages/party/sign/sign",
-    "pages/party/detail/detail"
-
+    "pages/party/detail/detail",
+    "pages/mine/balance/balance",
+    "pages/mine/minedetail/minedetail",
+    "pages/mine/withdraw/withdraw"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,7 +30,7 @@
         "text": "聚会"
       },
       {
-        "pagePath": "pages/party/sign/sign",
+        "pagePath": "pages/mine/minedetail/minedetail",
         "text": "我的"
       }
     ]

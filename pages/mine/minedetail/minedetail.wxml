@@ -1,0 +1,17 @@
+<!--pages/mine/minedetail/minedetail.wxml-->
+<view class="page">
+  <view class="page__minedetail">
+    <image class="maindetail_userimage" src="../../../image/weixinicon.png"></image>
+    <view class='minedetail_text'>
+      <view class="minedetail_username">Jarvis</view>
+      <view class="minedetail_usernum">1818888888888</view>
+    </view>
+  </view>
+
+  <button class="withdraw_btn" bindtap='withdraw'>
+  <image class='withdraw_btn_image' src='../../../image/weixinicon.png'></image>
+  <view class='withdraw_text'>提现</view>
+  <view class='withdraw_money'>8.60元</view>
+  </button>
+
+</view>

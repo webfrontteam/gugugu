@@ -1,0 +1,49 @@
+/* pages/mine/balance/balance.wxss */
+.page__balance {
+  width: 100%;
+  height: 200px;
+  background-color: #F0B45A;
+}
+
+.detail-btn{
+  /* top: 20px; */
+  background-color: #F0B45A;
+  text-align: right;
+  color: #FFFFFF;
+}
+
+.detail-btn::after{
+  border:none;
+}
+
+.balance__name{
+  margin-left: 12px;
+  font-family: PingFangSC-regular;
+  color: #FFFFFF
+}
+
+.balance__money{
+  margin-left: 12px;
+  font-size: 80px;
+  font-family: PingFangSC-regular;
+  color: #FFFFFF
+}
+
+.withdraw_btn{
+  background-color: #FFFFFF;
+  color: #000000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+.withdraw_btn::after{
+  border: none;
+}
+
+.withdraw_btn_image{
+  /* margin-right: 8rpx; */
+  width: 36rpx;
+  height: 36rpx;
+}

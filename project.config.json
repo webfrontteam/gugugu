@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 10,
 			"list": [
 				{
 					"id": -1,
@@ -83,7 +83,35 @@
 				{
 					"id": -1,
 					"name": "detail",
-					"pathName": "pages/party/detail/detail"
+					"pathName": "pages/party/detail/detail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "join",
+					"pathName": "pages/party/join/join",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "balance",
+					"pathName": "pages/mine/balance/balance",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "minedetail",
+					"pathName": "pages/mine/minedetail/minedetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "withdraw",
+					"pathName": "pages/mine/withdraw/withdraw",
+					"scene": null
 				}
 			]
 		}
