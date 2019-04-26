@@ -1,0 +1,9 @@
+/* pages/party/createSuccess/createSuccess.wxss */
+.bottom-btn{
+  width: 120px;
+  height: 35px;
+  text-align: center;
+  margin-top:15px;
+  color: #f0b45a;
+  line-height: 35px;
+}

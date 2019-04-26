@@ -1,0 +1,55 @@
+<!--pages/party/join/join.wxml-->
+<!-- <text>pages/party/join/join.wxml</text> -->
+
+<view class="page">
+    <view class="page__hd">
+    </view>
+    <view class="page__bd">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                <!-- 需要接口 -->
+                    <view class="list__label1">Jarvis</view>
+                    <view class="list__label2">邀请你加入活动</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">活动</view>
+                    <!-- 需要接口 -->
+                    <view class="weui-form-preview__value">聚会</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">时间</view>
+                    <!-- 需要接口 -->
+                    <view class="weui-form-preview__value">2019年8月2日 12：00</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">地点</view>
+                    <!-- 需要接口 -->
+                    <view class="weui-form-preview__value">银泰创意城</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">报名截止</view>
+                    <!-- 需要接口 -->
+                    <view class="list__value1">2018年8月1日 12：00</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="list__label3">咕咕押金</view>
+                    <!-- 需要接口 -->
+                    <view class="list__label4">6.66</view>
+                    <view class="list__value2">元</view>
+                </view>
+                <view class="weui-form-preview__item">
+                    <view class="list__text1">押金在成功签到后将会立即返还，还可参与瓜分鸽子们的押金！</view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="list__text_start">已有</view>
+    <!-- 需要接口 -->
+    <view class="list__text2">7</view>
+    <view class="list__text_end">人报名</view>
+    <view class="page__bd page__bd_spacing">
+        <button class="weui-btn" type="primary" bindtap='detail'>加入活动</button>
+    </view>
+</view>

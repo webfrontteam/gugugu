@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/party/create/create",
+    "pages/party/createSuccess/createSuccess",
+    "pages/party/join/join",
+    "pages/logs/logs",
+    "pages/party/homepage/homepage",
+    "pages/party/sign/sign",
+    "pages/party/detail/detail"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#201F25",
+    "navigationBarTitleText": "咕咕咕",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F0F0F2"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/party/join/join",
+        "text": "聚会"
+      },
+      {
+        "pagePath": "pages/party/sign/sign",
+        "text": "我的"
+      }
+    ]
+  }
+}

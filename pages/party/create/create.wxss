@@ -1,0 +1,5 @@
+/* pages/party/create/create.wxss */
+
+.create__bd {
+    padding-bottom: 18px;
+}

@@ -1,0 +1,142 @@
+/**app.wxss**/
+@import 'weui.wxss';
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+page {
+  background-color: #f0f0f2;
+  font-size: 15px;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.page__hd {
+  padding: 8px;
+}
+
+.page__bd {
+  padding-bottom: 15px;
+}
+
+.page__bd_spacing {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.page__ft {
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.page__title {
+  text-align: left;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.page__desc {
+  margin-top: 5px;
+  color: #888;
+  text-align: left;
+  font-size: 14px;
+}
+
+.list__text1 {
+  color: #b2b2b2;
+  font-size: 12px;
+  text-align: left;
+}
+.list__text2 {
+  float: left;
+  color: #b2b2b2;
+  font-size: 13px;
+  text-align: left;
+}
+.list__text_start {
+  float: left;
+  color: #b2b2b2;
+  font-size: 13px;
+  text-align: left;
+  margin-left: 15px;
+}
+.list__text_end {
+  color: #b2b2b2;
+  font-size: 13px;
+  text-align: left;
+}
+
+.list__label1 {
+  float: left;
+  margin-right: 1em;
+  color: #000;
+  text-align: justify;
+  text-align-last: justify;
+  font-size: 20px;
+}
+
+.list__label2 {
+  float: left;
+  min-width: 4em;
+  color: #f0b45a;
+  text-align: justify;
+  text-align-last: justify;
+  font-size: 20px;
+}
+
+.list__label3 {
+  float: left;
+  min-width: 4em;
+  margin-right: 1em;
+  color:#888888;
+  text-align: justify;
+  text-align-last: justify;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.list__label4 {
+  float: left;
+  min-width: 2em;
+  color: #f0b45a;
+  text-align: justify;
+  text-align-last: justify;
+  font-size: 25px;
+  line-height: 25px;
+}
+.list__label5 {
+  float: left;
+  min-width: 2em;
+  color: #888888;
+  text-align: justify;
+  text-align-last: justify;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.list__value1 {
+  display: block;
+  overflow: hidden;
+  word-break: normal;
+  word-wrap: break-word;
+  color: #f0b45a;
+  font-size: 17px;
+  text-align: left;
+}
+
+.list__value2 {
+  display: block;
+  overflow: hidden;
+  word-break: normal;
+  word-wrap: break-word;
+  color: #000;
+  font-size: 17px;
+  text-align: left;
+  line-height: 25px;
+}
