@@ -1,4 +1,5 @@
 /* pages/party/create/create.wxss */
+@import "../../../picker.wxss";
 
 .create__bd {
     padding-bottom: 18px;

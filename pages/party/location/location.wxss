@@ -1,0 +1,5 @@
+/* pages/party/location/location.wxss */
+view{
+  display: flex;
+  flex-direction: column;
+}

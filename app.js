@@ -1,15 +1,34 @@
 //app.js
 App({
-  onLaunch: function () {
+  onLaunch: function() {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
 
     // 登录
+    var that = this;
     wx.login({
       success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        var code = res.code
+        wx.getUserInfo({
+          success: res => {
+            that.globalData.userInfo = res.userInfo
+            wx.request({
+              url: that.globalData.ip + '/account/login',
+              method: 'POST',
+              header: {
+                'content-type': 'application/x-www-form-urlencoded'
+              },
+              data: {
+                code: code,
+                name:that.globalData.userInfo.nickName,
+                header:that.globalData.userInfo.avatarUrl
+              },
+              success: function (res) { }
+            })
+          }
+        })
       }
     })
     // 获取用户信息
@@ -34,6 +53,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    ip: "http://127.0.0.1:8080",
   }
 })

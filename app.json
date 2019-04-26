@@ -1,14 +1,16 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/party/homepage/homepage",
     "pages/party/create/create",
+    "pages/index/index",
+    
     "pages/party/createSuccess/createSuccess",
     "pages/party/join/join",
     "pages/logs/logs",
-    "pages/party/homepage/homepage",
-    "pages/party/sign/sign",
-    "pages/party/detail/detail"
 
+    "pages/party/sign/sign",
+    "pages/party/detail/detail",
+    "pages/party/location/location"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -20,7 +22,7 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/party/homepage/homepage",
         "text": "首页"
       },
       {
@@ -32,5 +34,10 @@
         "text": "我的"
       }
     ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "为了更好地服务与您,请您允许我的请求"
+    }
   }
 }

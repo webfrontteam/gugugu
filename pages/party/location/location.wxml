@@ -1,0 +1,10 @@
+<!--pages/party/location/location.wxml-->
+
+<view wx:if="{{hasLocation==true}}">
+<text>纬度：{{ location.latitude }}</text>
+<text>经度：{{ location.longitude }}</text>
+<text>地方：{{ location.address }}</text>
+<text>名字：{{ location.name }}</text>
+</view>
+<button bindtap="mapView" style="margin:10px">查看地图</button>
+<button bindtap="MapViewTap" style="margin:10px">选择位置</button>

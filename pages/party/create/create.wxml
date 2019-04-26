@@ -2,55 +2,72 @@
 <!-- <text>pages/party/create/create.wxml</text> -->
 
 <view class="page">
-    <view class="page__hd">
+  <view class="page__hd">
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">活动名称</view>
+        <input class="weui-cell__ft" placeholder="聚会" />
+      </view>
     </view>
-    <view class="page__bd">
-        <view class="weui-cells weui-cells_after-title">
-            <view class="weui-cell">
-                <view class="weui-cell__bd">活动名称</view>
-                <input class="weui-cell__ft" placeholder="聚会" />
+
+    <view class="weui-cells__title">日程</view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">活动日期</view>
+
+        <!-- 日期选择器 -->
+        <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+          <!-- <view class="weui-cell__ft weui-cell__ft_in-access">请选择活动日期</view> -->
+          <view wx:if="{{dateTimeArray==null}}">
+            <view class="weui-cell__ft weui-cell__ft_in-access">请选择活动日期</view>
+          </view>
+          <view wx:else>
+            <view class="weui-cell__ft weui-cell__ft_in-access">
+              {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
             </view>
+          </view>
+        </picker>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">活动时间</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">请选择活动时间</view>
+      </navigator>
+      <navigator bindtap='mapView' url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">活动地点</view>
+        <view wx:if="{{location.name==''}}">
+          <view class="weui-cell__ft weui-cell__ft_in-access">请选择活动地点</view>
         </view>
-
-        <view class="weui-cells__title">日程</view>
-        <view class="weui-cells weui-cells_after-title">
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">活动日期</view>
-                <view class="weui-cell__ft weui-cell__ft_in-access">请选择活动日期</view>
-            </navigator>
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">活动时间</view>
-                <view class="weui-cell__ft weui-cell__ft_in-access">请选择活动时间</view>
-            </navigator>
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">活动地点</view>
-                <view class="weui-cell__ft weui-cell__ft_in-access">请选择活动地点</view>
-            </navigator>
+        <view wx:else>
+          <view class="weui-cell__ft weui-cell__ft_in-access">{{ location.name }}</view>
         </view>
-
-        <view class="weui-cells__title">报名</view>
-        <view class="weui-cells weui-cells_after-title">
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">截止日期</view>
-                <view class="weui-cell__ft weui-cell__ft_in-access">请选择截至日期</view>
-            </navigator>
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">截至时间</view>
-                <view class="weui-cell__ft weui-cell__ft_in-access">请选择截至时间</view>
-            </navigator>
-            <view class="weui-cell">
-                <view class="weui-cell__bd">咕咕押金</view>
-                <input class="weui-cell__ft" placeholder="0.00元" />
-            </view>
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">押金瓜分方式</view>
-                <view class="weui-cell__ft weui-cell__ft_in-access">拼手气红包</view>
-            </navigator>
-        </view>
-
+      </navigator>
     </view>
 
-    <view class="create__bd page__bd_spacing">
-        <button class="weui-btn" type="primary" bindtap='createSuccess'>创建活动</button>
+    <view class="weui-cells__title">报名</view>
+    <view class="weui-cells weui-cells_after-title">
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">截止日期</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">请选择截至日期</view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">截至时间</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">请选择截至时间</view>
+      </navigator>
+      <view class="weui-cell">
+        <view class="weui-cell__bd">咕咕押金</view>
+        <input class="weui-cell__ft" placeholder="0.00元" />
+      </view>
+      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">押金瓜分方式</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">拼手气红包</view>
+      </navigator>
     </view>
+
+  </view>
+
+  <view class="create__bd page__bd_spacing">
+    <button class="weui-btn" type="primary" bindtap='createSuccess'>创建活动</button>
+  </view>
 </view>
