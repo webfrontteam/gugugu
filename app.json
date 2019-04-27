@@ -7,8 +7,10 @@
     "pages/logs/logs",
     "pages/party/homepage/homepage",
     "pages/party/sign/sign",
-    "pages/party/detail/detail"
-
+    "pages/party/detail/detail",
+    "pages/party/edit/edit",
+    "pages/party/manage/manage",
+    "pages/party/bill/bill"
   ],
   "window": {
     "backgroundTextStyle": "light",
