@@ -8,20 +8,19 @@
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell">
         <view class="weui-cell__bd">活动名称</view>
-        <input class="weui-cell__ft" placeholder="聚会" />
+        <input class="weui-cell__ft" placeholder="聚会" bindinput="nameInput"/>
       </view>
     </view>
 
     <view class="weui-cells__title">日程</view>
     <view class="weui-cells weui-cells_after-title">
       <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-        <view class="weui-cell__bd">活动日期</view>
+        <view class="weui-cell__bd">活动时间</view>
 
         <!-- 日期选择器 -->
         <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
-          <!-- <view class="weui-cell__ft weui-cell__ft_in-access">请选择活动日期</view> -->
           <view wx:if="{{dateTimeArray==null}}">
-            <view class="weui-cell__ft weui-cell__ft_in-access">请选择活动日期</view>
+            <view class="weui-cell__ft weui-cell__ft_in-access">请选择活动时间</view>
           </view>
           <view wx:else>
             <view class="weui-cell__ft weui-cell__ft_in-access">
@@ -29,10 +28,6 @@
             </view>
           </view>
         </picker>
-      </navigator>
-      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-        <view class="weui-cell__bd">活动时间</view>
-        <view class="weui-cell__ft weui-cell__ft_in-access">请选择活动时间</view>
       </navigator>
       <navigator bindtap='mapView' url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__bd">活动地点</view>
@@ -47,17 +42,23 @@
 
     <view class="weui-cells__title">报名</view>
     <view class="weui-cells weui-cells_after-title">
-      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-        <view class="weui-cell__bd">截止日期</view>
-        <view class="weui-cell__ft weui-cell__ft_in-access">请选择截至日期</view>
-      </navigator>
-      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-        <view class="weui-cell__bd">截至时间</view>
-        <view class="weui-cell__ft weui-cell__ft_in-access">请选择截至时间</view>
-      </navigator>
+      <!-- <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__bd">截止时间</view>
+        <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+          <view class="weui-cell__ft weui-cell__ft_in-access">
+            {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}:{{dateTimeArray[5][dateTime[5]]}}
+          </view>
+        </picker>
+      </navigator> -->
       <view class="weui-cell">
         <view class="weui-cell__bd">咕咕押金</view>
-        <input class="weui-cell__ft" placeholder="0.00元" />
+        <picker bindchange="changefeePicker" mode="multiSelector" value="{{feeIndex}}" range="{{feeArray}}">
+          <view class="weui-cell__ft weui-cell__ft_in-access">
+            {{feeArray[0][feeIndex[0]]}} . {{feeArray[1][feeIndex[1]]}}元
+          </view>
+        </picker>
+        
+        <!-- <input class="weui-cell__ft" placeholder="0.00元" /> -->
       </view>
       <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__bd">押金瓜分方式</view>
@@ -68,6 +69,6 @@
   </view>
 
   <view class="create__bd page__bd_spacing">
-    <button class="weui-btn" type="primary" bindtap='createSuccess'>创建活动</button>
+    <button class="weui-btn" bindtap='createSuccess'>创建活动</button>
   </view>
 </view>

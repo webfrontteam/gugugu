@@ -25,7 +25,16 @@ App({
                 name:that.globalData.userInfo.nickName,
                 header:that.globalData.userInfo.avatarUrl
               },
-              success: function (res) { }
+              success: function (res) {
+                console.log("success")
+                console.log(res.data)
+                that.globalData.token = res.data.data.token
+                // console.log(res.data.data.token)
+               },
+              fail: function (res) {
+                console.log("fail")
+                console.log(res.data);
+              }
             })
           }
         })
@@ -55,5 +64,6 @@ App({
   globalData: {
     userInfo: null,
     ip: "http://127.0.0.1:8080",
+    token: null,
   }
 })
