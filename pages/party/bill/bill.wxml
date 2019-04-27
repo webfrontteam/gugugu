@@ -1,0 +1,64 @@
+<!--pages/party/bill/bill.wxml-->
+
+<view class="page">
+  <view class="page__hd">
+  </view>
+
+  <view class="page__bd">
+    <button class="homepage-btn" >￥6.66</button>
+  </view>
+  <view class="page__bd">
+    <view class="weui-cells__title">共有七人签到，五人成功签到</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">Jarvis</view>
+        <view class="weui-cell__ft">6.59元</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">Jarvis</view>
+        <view class="weui-cell__ft">6.59元</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">Jarvis</view>
+        <view class="weui-cell__ft">6.59元</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">Jarvis</view>
+        <view class="weui-cell__ft">6.59元</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">Jarvis</view>
+        <view class="weui-cell__ft">6.59元</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">Jarvis</view>
+        <view class="weui-cell__ft">-5元</view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+        </view>
+        <view class="weui-cell__bd">Jarvis</view>
+        <view class="weui-cell__ft">-5元</view>
+      </view>
+    </view>
+  </view>
+</view>

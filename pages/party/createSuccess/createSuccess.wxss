@@ -1,9 +1,19 @@
 /* pages/party/createSuccess/createSuccess.wxss */
-.bottom-btn{
+.bottom-btn1{
   width: 120px;
   height: 35px;
   text-align: center;
   margin-top:15px;
   color: #f0b45a;
   line-height: 35px;
+  border:1px solid  #f0b45a;
+}
+.bottom-btn2{
+  width: 120px;
+  height: 35px;
+  text-align: center;
+  margin-top:15px;
+  color: #ffffff;
+  line-height: 35px;
+  background-color:#f0b45a;
 }

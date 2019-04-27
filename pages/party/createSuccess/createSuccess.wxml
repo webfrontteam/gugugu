@@ -27,10 +27,10 @@
         </view>
         <view class="weui-cell">
           <view class="weui-cell__bd">
-          <button  class="bottom-btn" plain="true" bindtap='backToHomepage'>返回首页</button>
+          <button  class="bottom-btn1"  bindtap='backToHomepage'>返回首页</button>
           </view>
           <view class="weui-cell__ft">
-          <button  class="bottom-btn" plain="true" bindtap='detail'>查看详情</button>
+          <button  class="bottom-btn2"  bindtap='detail'>查看详情</button>
           </view>
         </view>
       </view>

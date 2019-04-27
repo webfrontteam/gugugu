@@ -1,0 +1,10 @@
+/* pages/party/bill/bill.wxss */
+.homepage-btn {
+  width: 100%;
+  height: 160px;
+  line-height: 160px;
+  background-color: #F0B45A;
+  text-align: center;
+  font-size: 27px;
+  color: #FFFFFF;
+}

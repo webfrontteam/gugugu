@@ -65,10 +65,10 @@
         </view>
         <view class="weui-cell">
           <view class="weui-cell__bd">
-          <button  class="bottom-btn" plain="true">取消活动</button>
+          <button  class="bottom-btn1">取消活动</button>
           </view>
           <view class="weui-cell__ft">
-          <button  class="bottom-btn" plain="true">成员管理</button>
+          <button  class="bottom-btn2" >成员管理</button>
           </view>
         </view>
       </view>
