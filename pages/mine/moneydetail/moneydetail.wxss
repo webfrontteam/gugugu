@@ -1,0 +1,11 @@
+/* pages/mine/moneydetail/moneydetail.wxss */
+/* .weui-form-preview__hd{line-height:2em} */
+
+.weui-form-preview__hd{position:relative;padding:10px 15px;text-align:right;line-height:2em}.weui-form-preview__hd:after{content:" ";position:absolute;left:0;bottom:0;right:0;height:1px;border-bottom:1rpx solid #d9d9d9;color:#d9d9d9;left:15px}
+
+.weui-form-preview__label{color:#000000}
+
+.weui-form-preview__label2{float:left;margin-right:1em;min-width:4em;color:#888888;text-align:justify;text-align-last:justify;font-size: 12px;}
+
+.weui-form-preview__value_in-hd_ok{font-size:20px;color: #F0B45A }
+.weui-form-preview__value_in-hd{font-size:20px;color: #000000 }

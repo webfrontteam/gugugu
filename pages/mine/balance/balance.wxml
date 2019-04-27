@@ -12,5 +12,6 @@
   <button class="withdraw_btn" bindtap='withdraw'>
   <image class='withdraw_btn_image' src='../../../image/weixinicon.png'></image>
   <view>提现</view>
+  <view class="weui-cell__ft weui-cell__ft_in-access"></view>
   </button>
 </view>
