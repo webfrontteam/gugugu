@@ -68,8 +68,8 @@
 				},
 				{
 					"id": -1,
-					"name": "sign",
-					"pathName": "pages/party/sign/sign",
+          "name": "sign",
+          "pathName": "pages/party/sign/sign",
 					"query": "",
 					"scene": null
 				},
