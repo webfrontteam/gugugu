@@ -11,7 +11,7 @@ Page({
   data: {
     party_id: null,
     name: null,
-    timestamp: null,
+    // timestamp: null,
     time: null,
     plcae: null,
 
@@ -67,12 +67,13 @@ Page({
         console.log(res.data)
         that.setData({
           name: res.data.data.name,
-          timestamp: res.data.data.time,
+          // timestamp: res.data.data.time,
+          time: util.tsFormatTime(res.data.data.time, 'Y-M-D h:m'),
           place: res.data.data.place
         })
-        that.setData({
-          time: util.tsFormatTime(that.data.timestamp, 'Y-M-D h:m')
-        })
+        // that.setData({
+        //   time: util.tsFormatTime(that.data.timestamp, 'Y-M-D h:m')
+        // })
       }
     })
     
