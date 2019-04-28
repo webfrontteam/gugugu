@@ -1,11 +1,14 @@
 // pages/mine/minedetail/minedetail.js
+var app=getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    username:"",
+    score: 0,
+    header: ""
   },
 
   billdetail: function (options) {
@@ -38,6 +41,27 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var that = this
+    wx.request({
+      url: app.globalData.ip + "/account/detail",
+      method: 'GET',
+      header: {
+        'token': app.globalData.token
+      },
+      success(res) {
+        console.log("detailsuccess")
+        console.log(res.data);
+        that.setData({
+          username:res.data.data.username,
+          score: res.data.data.score,
+          header: res.data.data.header
+        })
+      },
+      fail: function (res) {
+        console.log("fail")
+        console.log(res.data);
+      }
+    })
 
   },
 

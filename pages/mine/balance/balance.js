@@ -1,11 +1,18 @@
 // pages/mine/balance/balance.js
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    score: 0
+  },
 
+  billdetail: function (options) {
+    wx.navigateTo({
+      url: '/pages/mine/moneydetail/moneydetail',
+    })
   },
 
   withdraw: function (options) {
@@ -32,6 +39,25 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var that = this
+    wx.request({
+      url: app.globalData.ip + "/account/detail",
+      method: 'GET',
+      header: {
+        'token': app.globalData.token
+      },
+      success(res) {
+        console.log("billsuccess")
+        console.log(res.data);
+        that.setData({
+          score: res.data.data.score
+        })
+      },
+      fail: function (res) {
+        console.log("fail")
+        console.log(res.data);
+      }
+    })
 
   },
 

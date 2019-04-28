@@ -6,7 +6,7 @@
   <view class="page__balance">
     <button class="detail-btn" bindtap='billdetail'>账单明细</button>
     <view class="balance__name">余额账户（元）</view>
-    <view class="balance__money">6.66</view>
+    <view class="balance__money">{{score}}</view>
   </view>
   
   <button class="withdraw_btn" bindtap='withdraw'>

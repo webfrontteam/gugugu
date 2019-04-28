@@ -8,35 +8,37 @@
     <button class="homepage-btn" bindtap='creatParty'>创建活动</button>
   </view>
 
-  <view class="page__bd">
-    <view class="weui-form-preview">
-      <view class="weui-form-preview__bd">
-        <view class="weui-form-preview__item">
-          <view class="list__label2">正在参加</view>
-        </view>
-        <view class="weui-form-preview__item">
-          <view class="weui-form-preview__label">活动</view>
-          <!-- 需要接口 -->
-          <view class="weui-form-preview__value">聚会</view>
-        </view>
-        <view class="weui-form-preview__item">
-          <view class="weui-form-preview__label">时间</view>
-          <!-- 需要接口 -->
-          <view class="weui-form-preview__value">2019年8月2日 12：00</view>
-        </view>
-        <view class="weui-form-preview__item">
-          <view class="weui-form-preview__label">地点</view>
-          <!-- 需要接口 -->
-          <view class="weui-form-preview__value">银泰创意城</view>
-        </view>
-       <view class="weui-form-preview__item">
-          <!-- <view class="homepage__text_start" wx:if="{{isOpened}}">签到未开启<iew> -->
-          <view class="homepage__text_start" >签到未开启</view>
-          <!-- 需要接口 -->
-          <view class="homepage__label">0/</view>
-          <!-- 需要接口 -->
-          <view class="homepage__label">8</view>
-          <button class="homepage__btn__small" type="default" disabled="true">签到</button>
+  <view wx:for="{{list}}" wx:key="">
+    <view class="page__bd">
+      <view class="weui-form-preview">
+        <view class="weui-form-preview__bd">
+          <view class="weui-form-preview__item">
+            <view class="list__label2">正在参加</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">活动</view>
+            <!-- 需要接口 -->
+            <view class="weui-form-preview__value">{{item.party_id}}</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">时间</view>
+            <!-- 需要接口 -->
+            <view class="weui-form-preview__value">2019年8月2日 12：00</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <view class="weui-form-preview__label">地点</view>
+            <!-- 需要接口 -->
+            <view class="weui-form-preview__value">银泰创意城</view>
+          </view>
+          <view class="weui-form-preview__item">
+            <!-- <view class="homepage__text_start" wx:if="{{isOpened}}">签到未开启<iew> -->
+            <view class="homepage__text_start">签到未开启</view>
+            <!-- 需要接口 -->
+            <view class="homepage__label">0/</view>
+            <!-- 需要接口 -->
+            <view class="homepage__label">8</view>
+            <button class="homepage__btn__small" type="default" disabled="true">签到</button>
+          </view>
         </view>
       </view>
     </view>
