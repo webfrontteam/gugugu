@@ -11,7 +11,6 @@ Page({
    */
   data: {
     party_id: null,
-    hasLocation: false,
     name: "聚会",
     fee: null,
     feeArray: [
@@ -21,12 +20,15 @@ Page({
     feeIndex: [5, 0],
     time: null,
     timestamp: null,
-    location: {
-      longitude: null,
-      latitude: null,
-      name: null,
-      address: null
-    },
+    longitude: null,
+    latitude: null,
+    place: null,
+    // location: {
+    //   longitude: null,
+    //   latitude: null,
+    //   name: null,
+    //   address: null
+    // },
     dateTimeArray: null,
     dateTime: null,
     dateTimeArray1: null,
@@ -38,7 +40,6 @@ Page({
     this.setData({
       name: e.detail.value
     })
-    console.log(name);
   },
   mapView: function () {
     var that = this
@@ -47,13 +48,15 @@ Page({
         // success
         console.log(res, "location")
         that.setData({
-          hasLocation: true,
-          location: {
-            longitude: res.longitude,
-            latitude: res.latitude,
-            address: res.address,
-            name: res.name
-          },
+          longitude: res.longitude,
+          latitude: res.latitude,
+          plcae: res.name,
+          // location: {
+          //   longitude: res.longitude,
+          //   latitude: res.latitude,
+          //   address: res.address,
+          //   name: res.name
+          // },
           detail_info: res.address,
           wd: res.latitude,
           jd: res.longitude
@@ -120,7 +123,7 @@ Page({
   },
   changeDateTimeColumn1(e) {
     var arr = this.data.dateTime1,
-      dateArr = this.data.dateTimeArray1;
+    dateArr = this.data.dateTimeArray1;
 
     arr[e.detail.column] = e.detail.value;
     dateArr[2] = dateTimePicker.getMonthDay(dateArr[0][arr[0]], dateArr[1][arr[1]]);
@@ -169,10 +172,11 @@ Page({
       },
       data: {
         name: that.data.name,
-        latitude: that.data.location.latitude,
+        latitude: that.data.latitude,
         fee: that.data.fee,
         time: that.data.timestamp,
-        longtitude: that.data.location.longitude
+        longtitude: that.data.longitude,
+        place: that.data.place
       },
       success: function (res) {
         console.log("success")

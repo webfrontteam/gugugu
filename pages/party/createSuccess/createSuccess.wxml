@@ -15,7 +15,7 @@
       </view>
       <view class="weui-form-preview__item">
         <view class="weui-form-preview__label">地点</view>
-        <view class="weui-form-preview__value">{{location.name}}</view>
+        <view class="weui-form-preview__value">{{place}}</view>
       </view>
       <!-- <view class="weui-form-preview__item">
           <view class="weui-form-preview__label">报名截止</view>

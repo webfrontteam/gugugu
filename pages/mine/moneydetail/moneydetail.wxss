@@ -3,7 +3,7 @@
 
 .weui-form-preview__hd{padding:10px 15px;line-height:2em}
 
-.weui-form-preview__label{color:#000000}
+.weui-form-preview__label{min-width:2em;color:#000000;font-size: 16px;}
 
 .weui-form-preview__label2{float:left;margin-right:1em;min-width:4em;color:#888888;text-align:justify;text-align-last:justify;font-size: 12px;}
 
