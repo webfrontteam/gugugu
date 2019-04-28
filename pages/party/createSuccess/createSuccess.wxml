@@ -11,12 +11,10 @@
       </view>
       <view class="weui-form-preview__item">
         <view class="weui-form-preview__label">时间</view>
-        <!-- 需要接口 -->
         <view class="weui-form-preview__value">{{time}}</view>
       </view>
       <view class="weui-form-preview__item">
         <view class="weui-form-preview__label">地点</view>
-        <!-- 需要接口 -->
         <view class="weui-form-preview__value">{{location.name}}</view>
       </view>
       <!-- <view class="weui-form-preview__item">
@@ -33,10 +31,7 @@
       </view>
     </view>
   </view>
-
-  <!-- <view class="weui-form-preview"> -->
-    <view class="weui-cell__bd">
-      <button class="bottom-btn3" bindtap='backToHomepage'>分享给好友</button>
-    </view>
-  <!-- </view> -->
+  <view class="weui-cell__bd">
+    <button class="bottom-btn3" open-type="share">分享给好友</button>
+  </view>
 </view>

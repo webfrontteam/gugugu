@@ -39,9 +39,10 @@ Page({
   onLoad: function (options) {
     var that = this;
     that.setData({
-      party_id: options.party_id
+      party_id: 'ef2bff0fc21f4335b4fb255f441c430d'
+      // party_id: options.party_id
     })
-    console.log(that.data.party_id)
+    // console.log(that.data.party_id)
   },
 
   /**
@@ -113,7 +114,21 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (res) {
+    if (res.from == 'button') {
+      console.log(res.target, res)
+    }
+    return {
+      title: '邀请加入',
+      path: 'pages/party/join/join',
+      success: function (res) {
+        // 转发成功
+        console.log("转发成功");
+      },
+      fail: function (res) {
+        // 转发失败
+        console.log("转发失败" );
+      }
+    }
   }
 })
