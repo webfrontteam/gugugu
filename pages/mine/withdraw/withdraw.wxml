@@ -6,7 +6,7 @@
     <view class='view-flex-row0'>
       <view class="weui-panel__hd1">提现到微信零钱</view>
       <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-        <image class="withdraw_userimage" src="../../../image/weixinicon.png" />
+        <image class="withdraw_userimage" src="{{header}}" />
       </view>
     </view>
 
@@ -27,7 +27,7 @@
       <!-- <view class="weui-cell weui-cell_access weui-cell_link"></view>  -->
     <view class="weui-cell weui-cell_access weui-cell_link">
       <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-        <view class="weui-media-box__desc">当前余额8.60元，全部提现</view>
+        <view class="weui-media-box__desc">当前余额{{score}}元，全部提现</view>
         <view class="page__bd page__bd_spacing">
           <button class="weui-btn">提现</button>
         </view>

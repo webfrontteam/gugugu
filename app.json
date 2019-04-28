@@ -33,7 +33,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/party/join/join",
+        "pagePath": "pages/party/activity/activity",
         "text": "聚会"
       },
       {

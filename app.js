@@ -43,7 +43,7 @@ App({
       wx.redirectTo({
         url: '../party/detail/detail',
       })
-    }, 2000)
+    }, 5000)
   },
   globalData: {
     userInfo: null,

@@ -1,7 +1,7 @@
 // pages/party/create/create.js
 
 var dateTimePicker = require('../../../utils/dateTimePicker.js');
-// var ss = require('../../../utils/util.js');
+var util = require('../../../utils/util.js');
 var app = getApp();
 
 Page({
@@ -10,22 +10,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    party_id: "",
+    party_id: null,
     hasLocation: false,
     name: "聚会",
-    fee: "",
+    fee: null,
     feeArray: [
       [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
       [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     ],
     feeIndex: [5, 0],
-    time: "",
-    timestamp: "",
+    time: null,
+    timestamp: null,
     location: {
-      longitude: "",
-      latitude: "",
-      name: "",
-      address: ""
+      longitude: null,
+      latitude: null,
+      name: null,
+      address: null
     },
     dateTimeArray: null,
     dateTime: null,
@@ -146,7 +146,6 @@ Page({
 
     //时间戳
     var s = that.data.dateTimeArray1[0][that.data.dateTime1[0]] + "-" + that.data.dateTimeArray1[1][that.data.dateTime1[1]] + "-" + that.data.dateTimeArray1[2][that.data.dateTime1[2]] + " " + that.data.dateTimeArray1[3][that.data.dateTime1[3]] + ":" + that.data.dateTimeArray1[4][that.data.dateTime1[4]]
-    // var timestamp = new Date(s.replace(/-/g, "/")).getTime()
     that.setData({
       timestamp: new Date(s.replace(/-/g, "/")).getTime()
     })
@@ -189,9 +188,13 @@ Page({
       }
     })
 
-    wx.navigateTo({
-      url: '/pages/party/createSuccess/createSuccess?party_id=' + that.data.party_id,
-    })
+    setTimeout(function () {
+      wx.navigateTo({
+        url: '/pages/party/createSuccess/createSuccess?party_id=' + that.data.party_id,
+      })
+    }, 2000)
+
+    
   },
 
   /**

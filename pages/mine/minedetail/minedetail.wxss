@@ -66,6 +66,6 @@
 
 .withdraw_money{
   color: #000000;
-  margin-left: 160px;
+  margin-left: 140px;
   text-align: right
 }
