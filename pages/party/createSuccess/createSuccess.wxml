@@ -1,38 +1,42 @@
 <!--pages/party/createSuccess/createSuccess.wxml-->
 <view class="page__bd">
-    <view class="weui-form-preview">
-      <view class="weui-form-preview__bd">
-        <view class="weui-form-preview__item">
-          <view class="list__label2">正在参加</view>
-        </view>
-        <view class="weui-form-preview__item">
-          <view class="weui-form-preview__label">活动</view>
-          <!-- 需要接口 -->
-          <view class="weui-form-preview__value">聚会</view>
-        </view>
-        <view class="weui-form-preview__item">
-          <view class="weui-form-preview__label">时间</view>
-          <!-- 需要接口 -->
-          <view class="weui-form-preview__value">2019年8月2日 12：00</view>
-        </view>
-        <view class="weui-form-preview__item">
-          <view class="weui-form-preview__label">地点</view>
-          <!-- 需要接口 -->
-          <view class="weui-form-preview__value">银泰创意城</view>
-        </view>
-        <view class="weui-form-preview__item">
+  <view class="weui-form-preview">
+    <view class="weui-form-preview__bd">
+      <view class="weui-form-preview__item">
+        <view class="list__label2">正在参加</view>
+      </view>
+      <view class="weui-form-preview__item">
+        <view class="weui-form-preview__label">活动</view>
+        <view class="weui-form-preview__value">{{name}}</view>
+      </view>
+      <view class="weui-form-preview__item">
+        <view class="weui-form-preview__label">时间</view>
+        <!-- 需要接口 -->
+        <view class="weui-form-preview__value">{{time}}</view>
+      </view>
+      <view class="weui-form-preview__item">
+        <view class="weui-form-preview__label">地点</view>
+        <!-- 需要接口 -->
+        <view class="weui-form-preview__value">{{location.name}}</view>
+      </view>
+      <!-- <view class="weui-form-preview__item">
           <view class="weui-form-preview__label">报名截止</view>
-          <!-- 需要接口 -->
           <view class="weui-form-preview__value">2019年8月1日 12:00</view>
+        </view> -->
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <button class="bottom-btn1" bindtap='backToHomepage'>返回首页</button>
         </view>
-        <view class="weui-cell">
-          <view class="weui-cell__bd">
-          <button  class="bottom-btn1"  bindtap='backToHomepage'>返回首页</button>
-          </view>
-          <view class="weui-cell__ft">
-          <button  class="bottom-btn2"  bindtap='detail'>查看详情</button>
-          </view>
+        <view class="weui-cell__ft">
+          <button class="bottom-btn2" bindtap='detail'>查看详情</button>
         </view>
       </view>
-   </view>
+    </view>
+  </view>
+
+  <!-- <view class="weui-form-preview"> -->
+    <view class="weui-cell__bd">
+      <button class="bottom-btn3" bindtap='backToHomepage'>分享给好友</button>
+    </view>
+  <!-- </view> -->
 </view>

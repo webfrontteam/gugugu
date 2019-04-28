@@ -1,11 +1,24 @@
 // pages/party/createSuccess/createSuccess.js
+
+var app = getApp();
+var util = require('../../../utils/util.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    party_id: ""
+    party_id: null,
+    name: null,
+    timestamp: null,
+    time: null,
+    location: {
+      longitude: null,
+      latitude: null,
+      name: "银泰创意城"
+    },
+
   },
 
   backToHomepage: function(options){
@@ -28,6 +41,7 @@ Page({
     that.setData({
       party_id: options.party_id
     })
+    console.log(that.data.party_id)
   },
 
   /**
@@ -41,7 +55,31 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this
+    wx.request({
+      url: app.globalData.ip + "/party/detail",
+      method: 'GET',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'token': app.globalData.token,
+      },
+      data: {
+        'party_id': that.data.party_id
+      },
+      success(res) {
+        console.log("createsuccess")
+        console.log(res.data)
+        that.setData({
+          name: res.data.data.name,
+          timestamp: res.data.data.time,
+          // location.name:
+        })
+        that.setData({
+          time: util.tsFormatTime(that.data.timestamp, 'Y-M-D h:m')
+        })
+      }
+    })
+    
   },
 
   /**
