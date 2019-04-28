@@ -1,11 +1,19 @@
 // pages/party/edit/edit.js
+
+var dateTimePicker = require('../../../utils/dateTimePicker.js');
+var util = require('../../../utils/util.js');
+var app = getApp();
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    name: null,
+    time: null,
+    place: null,
+    fee: null
   },
 
   /**
@@ -26,6 +34,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    wx.request({
+      url: app.globalData.ip + '/party/launch',
+      method: 'GET',
+    })
 
   },
 
