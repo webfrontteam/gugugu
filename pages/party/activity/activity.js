@@ -1,4 +1,5 @@
 // pages/party/activity/activity.js
+var app = getApp();
 Page({
 
   /**
@@ -8,7 +9,16 @@ Page({
     tabs: ["全部", "待签到", "待开启","已结束"],
     activeIndex: 0,
     sliderOffset: 0,
-    sliderLeft: 0
+    sliderLeft: 0,
+    start:0,
+    count:5,
+    list:null
+  },
+
+  detialButton: function (options) {
+    wx.navigateTo({
+      url: '/pages/party/detail/detail?partyId' + options.currentTarget.id,
+    })
   },
 
   /**
@@ -19,7 +29,7 @@ Page({
     wx.getSystemInfo({
       success: function (res) {
         that.setData({
-          sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
+          sliderLeft: (res.windowWidth / that.data.tabs.length ) / 2,
           sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex
         });
       }
@@ -44,6 +54,25 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+
+    var that = this;
+    wx.request({
+      url: app.globalData.ip + "/party/list",
+      method: 'GET',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'token': app.globalData.token,
+      },
+      data: {
+        'start': that.data.start,
+        'count': that.data.count
+      },
+      success(res) {
+        that.setData({
+          list: res.data.data.parties
+        })
+      },
+    })
 
   },
 
@@ -72,6 +101,29 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+
+    var that = this;
+    wx.request({
+      url: app.globalData.ip + "/party/list",
+      method: 'GET',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'token': app.globalData.token,
+      },
+      data: {
+        'start': that.data.start + that.data.count,
+        'count': that.data.count
+      },
+      success(res) {
+        if (res.data.data != null) {
+          var newList = that.data.list.concat(res.data.data.parties);
+          that.setData({
+            start: that.data.start + that.data.count,
+            list: newList
+          })
+        }
+      },
+    })
 
   },
 

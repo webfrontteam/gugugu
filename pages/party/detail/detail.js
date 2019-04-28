@@ -49,6 +49,8 @@ Page({
           }
         }
         that.setData({
+          mode: res.data.data.mode,
+          place:res.data.data.place,
           name: res.data.data.name,
           time: util.tsFormatTime(res.data.data.time, 'Y-M-D h:m'),
           fee: res.data.data.fee,
@@ -57,6 +59,28 @@ Page({
           total:res.data.data.members.length
         })
 
+      },
+      fail: function (res) {
+        console.log("fail")
+        console.log(res.data);
+      }
+    });
+
+    wx.request({
+      url: app.globalData.ip + "/party/detail/",
+      //app.globalData.ip + '/party/participate',
+      method: 'POST',
+
+      header: {
+        'token': app.globalData.token,
+        'Content-Type': application/x-www-form-urlencoded
+      },
+      data: {
+        "party_id": that.data.partyId,
+        "mode": that.data.mode
+      },
+      success: function (res) {
+        console.log("detail")
       },
       fail: function (res) {
         console.log("fail")
