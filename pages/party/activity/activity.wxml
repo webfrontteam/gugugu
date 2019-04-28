@@ -1,4 +1,7 @@
 <!--pages/party/activity/activity.wxml-->
+<wxs src="../../../utils/timeUtil.wxs" module="tools" />
+
+
 <view class="page">
   <view class="page__bd">
     <view class="weui-tab">
@@ -26,7 +29,7 @@
                     <view class="weui-form-preview__value_in-hd_notbeing" wx:if="{{item.mode==2}}">未开启签到</view>
                     <view class="weui-form-preview__value_in-hd_notbeing" wx:if="{{item.mode==3}}">活动结束</view>
                     <view class="weui-form-preview__value_in-hd_notbeing" wx:if="{{item.mode==0}}">活动未开启</view>
-                    <view class="weui-form-preview__label">{{item.partyDate}}</view>
+                    <view class="weui-form-preview__label">{{tools.sub(item.partyDate)}}</view>
                     <view class="weui-form-preview__value_in-hd_ok">
                       <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
