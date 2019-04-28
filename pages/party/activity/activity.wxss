@@ -1,0 +1,27 @@
+/* pages/party/activity/activity.wxss */
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.weui-tab__panel{box-sizing:border-box;height:100%;padding-top:0px;overflow:auto;-webkit-overflow-scrolling:touch}
+
+.weui-form-preview__hd{line-height:2em}
+
+.weui-cell__ft_in-access{padding-right:13px;position:relative;left:105px}
+
+.weui-form-preview__label{color:#000000}
+
+.weui-form-preview__label2{float:left;margin-right:10em;min-width:4em;color:#000000;text-align:left;text-align-last:left;font-size: 15px;}
+
+.weui-form-preview__value_in-hd_being{font-size:18px;color: #F0B45A }
+.weui-form-preview__value_in-hd_notbeing{font-size:18px;color: #888888 }
+.weui-form-preview__value_in-hd{font-size:20px;color: #000000 }

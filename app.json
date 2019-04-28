@@ -7,10 +7,17 @@
     "pages/party/createSuccess/createSuccess",
     "pages/party/join/join",
     "pages/logs/logs",
-
+<<<<<<< HEAD
+=======
+    "pages/party/homepage/homepage",
     "pages/party/sign/sign",
     "pages/party/detail/detail",
-    "pages/party/location/location"
+    "pages/mine/balance/balance",
+    "pages/mine/minedetail/minedetail",
+    "pages/mine/withdraw/withdraw",
+    "pages/mine/moneydetail/moneydetail",
+    "pages/party/activity/activity"
+>>>>>>> duan
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -30,7 +37,7 @@
         "text": "聚会"
       },
       {
-        "pagePath": "pages/party/sign/sign",
+        "pagePath": "pages/mine/minedetail/minedetail",
         "text": "我的"
       }
     ]

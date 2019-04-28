@@ -37,7 +37,10 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+<<<<<<< HEAD
+=======
+			"current": 12,
+>>>>>>> duan
 			"list": [
 				{
 					"id": -1,
@@ -88,8 +91,47 @@
 				},
 				{
 					"id": -1,
-					"name": "location",
-					"pathName": "pages/party/location/location"
+<<<<<<< HEAD
+=======
+					"name": "join",
+					"pathName": "pages/party/join/join",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "balance",
+					"pathName": "pages/mine/balance/balance",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "minedetail",
+					"pathName": "pages/mine/minedetail/minedetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "withdraw",
+					"pathName": "pages/mine/withdraw/withdraw",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "moneydetail",
+					"pathName": "pages/mine/moneydetail/moneydetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "activity",
+					"pathName": "pages/party/activity/activity",
+					"scene": null
+>>>>>>> duan
 				}
 			]
 		}
