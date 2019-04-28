@@ -9,7 +9,7 @@
             <view class="weui-form-preview__bd">
                 <view class="weui-form-preview__item">
                 <!-- 需要接口 -->
-                    <view class="list__label1">Jarvis</view>
+                    <view class="list__label1">JYX</view>
                     <view class="list__label2">邀请你加入活动</view>
                 </view>
                 <view class="weui-form-preview__item">
@@ -20,22 +20,17 @@
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">时间</view>
                     <!-- 需要接口 -->
-                    <view class="weui-form-preview__value">2019年8月2日 12：00</view>
+                    <view class="weui-form-preview__value">2019年4月29日 05：15</view>
                 </view>
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">地点</view>
                     <!-- 需要接口 -->
-                    <view class="weui-form-preview__value">银泰创意城</view>
-                </view>
-                <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">报名截止</view>
-                    <!-- 需要接口 -->
-                    <view class="list__value1">2018年8月1日 12：00</view>
+                    <view class="weui-form-preview__value">洪山区政府</view>
                 </view>
                 <view class="weui-form-preview__item">
                     <view class="list__label3">咕咕押金</view>
                     <!-- 需要接口 -->
-                    <view class="list__label4">6.66</view>
+                    <view class="list__label4">5</view>
                     <view class="list__value2">元</view>
                 </view>
                 <view class="weui-form-preview__item">

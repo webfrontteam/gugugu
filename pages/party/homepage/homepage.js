@@ -21,6 +21,7 @@ Page({
     wx.navigateTo({
       url: '/pages/party/detail/detail?party_id='+options.currentTarget.id,
     })
+    console.log(options.currentTarget.id)
   },
 
   /**

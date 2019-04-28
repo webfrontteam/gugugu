@@ -10,7 +10,7 @@ Page({
 
   detail: function(options){
     wx.navigateTo({
-      url: '/pages/party/detail/detail',
+      url: '/pages/party/detail/detail?party_id=' + '04e6e679d1344b3895797f9250d8405e',
     })
   },
 

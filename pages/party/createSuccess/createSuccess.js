@@ -13,7 +13,7 @@ Page({
     name: null,
     // timestamp: null,
     time: null,
-    plcae: null,
+    place: null,
 
   },
 
@@ -40,7 +40,7 @@ Page({
     that.setData({
       party_id: options.party_id
     })
-    console.log("party_id:" + that.data.party_id)
+    console.log("party_id::" + that.data.party_id)
   },
 
   /**

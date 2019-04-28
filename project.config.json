@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 10,
+			"current": 11,
 			"list": [
 				{
 					"id": -1,
@@ -68,8 +68,8 @@
 				},
 				{
 					"id": -1,
-          "name": "sign",
-          "pathName": "pages/party/sign/sign",
+					"name": "sign",
+					"pathName": "pages/party/sign/sign",
 					"query": "",
 					"scene": null
 				},
@@ -110,7 +110,13 @@
 				{
 					"id": -1,
 					"name": "edit",
-					"pathName": "pages/party/edit/edit"
+					"pathName": "pages/party/edit/edit",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "join",
+					"pathName": "pages/party/join/join"
 				}
 			]
 		}

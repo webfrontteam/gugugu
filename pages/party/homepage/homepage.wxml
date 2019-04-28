@@ -1,5 +1,6 @@
 <!--pages/party/homepage/homepage.wxml-->
 <!-- <text>pages/party/homepage/homepage.wxml</text> -->
+<wxs src="../../../utils/timeUtil.wxs" module="tools" />
 <view class="page">
   <view class="page__hd">
   </view>
@@ -23,7 +24,7 @@
           <view class="weui-form-preview__item">
             <view class="weui-form-preview__label">时间</view>
             <!-- 需要接口 -->
-            <view class="weui-form-preview__value">{{item.partyDate}}</view>
+            <view class="weui-form-preview__value">{{tools.sub(item.partyDate)}}</view>
           </view>
           <view class="weui-form-preview__item">
             <view class="weui-form-preview__label">地点</view>
