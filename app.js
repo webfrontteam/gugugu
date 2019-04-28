@@ -27,6 +27,7 @@ App({
                 console.log("success")
                 console.log(res.data)
                 that.globalData.token = res.data.data.token
+                that.globalData.ifTokenGet=true
                 // console.log(res.data.data.token)
               },
               fail: function (res) {
@@ -43,11 +44,12 @@ App({
       wx.switchTab({
         url: '../party/homepage/homepage',
       })
-    }, 5000)
+    }, 2000)
   },
   globalData: {
     userInfo: null,
     ip: "http://127.0.0.1:8080",
     token: null,
+    ifTokenGet:false
   }
 })
