@@ -1,4 +1,5 @@
 // pages/party/homepage/homepage.js
+var app = getApp();
 Page({
 
   /**
@@ -32,6 +33,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    wx.request({
+      url: app.globalData.ip +"/party/list",
+      method: 'GET',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'token':app.globalData.token,
+      },
+      data: {
+        'start':1,
+        'count':5
+      },
+      success(res) {
+        console.log("fe")
+      }
+    })
 
   },
 

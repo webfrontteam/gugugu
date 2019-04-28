@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/party/homepage/homepage",
     "pages/party/create/create",
-    "pages/index/index",
     
     "pages/party/createSuccess/createSuccess",
     "pages/party/join/join",
