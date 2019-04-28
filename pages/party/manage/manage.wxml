@@ -25,6 +25,6 @@
     </view>
   </view>
   <view class="page__bd page__bd_spacing">
-    <button class="weui-btn">截止签到 </button>
+    <button class="weui-btn" bindtap='endSign'>截止签到 </button>
   </view>
 </view>

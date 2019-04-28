@@ -170,6 +170,12 @@ Page({
         that.setData({
           party_id: res.data.data.party_id
         })
+
+        setTimeout(function () {
+          wx.navigateTo({
+            url: '/pages/party/createSuccess/createSuccess?party_id=' + that.data.party_id,
+          })
+        }, 2000)
       },
       fail: function (res) {
         console.log("fail")
@@ -177,11 +183,7 @@ Page({
       }
     })
 
-    setTimeout(function () {
-      wx.navigateTo({
-        url: '/pages/party/createSuccess/createSuccess?party_id=' + that.data.party_id,
-      })
-    }, 2000)
+    
 
     
   },

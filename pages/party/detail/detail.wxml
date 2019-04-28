@@ -53,7 +53,7 @@
           <view class="weui-form-preview__item ">
             <!-- <view class="homepage__text_start " wx:if="{{isOpened}} ">签到未开启<iew> -->
             <view class="homepage__text_start ">已有{{total}}人加入</view>
-            <button class="homepage__btn__small " type="default " disabled="true ">截止</button>
+            <button class="homepage__btn__small " type="default " disabled="false ">截止</button>
           </view>
         </view>
 
@@ -68,7 +68,7 @@
             <view class="homepage__label ">0/</view>
             <!-- 需要接口 -->
             <view class="homepage__label ">{{total}}</view>
-            <button class="homepage__btn__small " type="default " disabled="false ">签到</button>
+            <button class="homepage__btn__small " type="default " disabled="true ">签到</button>
           </view>
         </view>
 
@@ -83,7 +83,7 @@
             <view class="homepage__label ">{{count}}/</view>
             <!-- 需要接口 -->
             <view class="homepage__label ">{{total}}</view>
-            <button class="homepage__btn__small " type="default " disabled="true ">签到</button>
+            <button class="homepage__btn__small " type="default " disabled="false ">签到</button>
           </view>
         </view>
 
@@ -98,19 +98,19 @@
             <view class="homepage__label ">{{count}}/</view>
             <!-- 需要接口 -->
             <view class="homepage__label ">{{total}}</view>
-            <button class="homepage__btn__small " type="default " disabled="false ">已经签到</button>
+            <button class="homepage__btn__small " type="default " disabled="true ">已经签到</button>
           </view>
         </view>
 
         <view class="weui-cell ">
           <view wx:if="{{mode==0||mode==2}} " class="weui-cell__bd ">
-            <button class="bottom-btn1 " disabled="true ">开启签到</button>
+            <button class="bottom-btn1 " disabled="false" bindtap='openSign'>开启签到</button>
           </view>
           <view wx:else class="weui-cell__bd">
-            <button class="bottom-btn1" disabled="false">开启签到</button>
+            <button class="bottom-btn1" disabled="true" >开启签到</button>
           </view>
           <view class="weui-cell__ft">
-            <button class="bottom-btn2">活动管理</button>
+            <button class="bottom-btn2" bindtap='manage'>活动管理</button>
           </view>
 
         </view>

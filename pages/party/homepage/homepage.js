@@ -19,7 +19,7 @@ Page({
 
   detialButton:function(options){
     wx.navigateTo({
-      url: '/pages/party/detail/detail?partyId'+options.currentTarget.id,
+      url: '/pages/party/detail/detail?party_id='+options.currentTarget.id,
     })
   },
 

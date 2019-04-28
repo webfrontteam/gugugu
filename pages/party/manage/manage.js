@@ -1,4 +1,6 @@
 // pages/party/manage/manage.js
+var app = getApp()
+
 Page({
 
   /**
@@ -6,13 +8,41 @@ Page({
    */
   data: {
     "members": "",
+    party_id:null
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      party_id:options.party_id
+    })
+    var that = this
+    wx.request({
+      url: app.globalData.ip + "/party/detail/",
+      //app.globalData.ip + '/party/participate',
+      method: 'GET',
 
+      header: {
+        'token': app.globalData.token
+      },
+      data: {
+        "party_id": that.data.party_id
+      },
+      success: function (res) {
+        console.log("detail")
+        console.log(res.data.data.members.length);
+        that.setData({
+          members: res.data.data.members,
+        })
+
+      },
+      fail: function (res) {
+        console.log("fail")
+        console.log(res.data);
+      }
+    })
   },
 
   /**
@@ -40,31 +70,7 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    var that = this
-    wx.request({
-      url: app.globalData.ip + "/party/detail/",
-      //app.globalData.ip + '/party/participate',
-      method: 'GET',
-
-      header: {
-        'token': app.globalData.token
-      },
-      data: {
-        "party_id": that.data.partyId
-      },
-      success: function (res) {
-        console.log("detail")
-        console.log(res.data.data.members.length);
-        that.setData({
-          members: res.data.data.members,
-        })
-
-      },
-      fail: function (res) {
-        console.log("fail")
-        console.log(res.data);
-      }
-    })
+    
 
   },
 
@@ -87,5 +93,30 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  endSign: function(){
+    var that = this
+    wx.request({
+      url: app.globalData.ip + "/party/chmod",
+      method: 'POST',
+
+      header: {
+        'token': app.globalData.token,
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        "party_id": that.data.party_id,
+        "mode": 3
+      },
+      success: function (res) {
+        console.log("end success")
+        console.log(res.data);
+      },
+      fail: function (res) {
+        console.log("end fail")
+        console.log(res.data);
+      }
+    })
   }
 })

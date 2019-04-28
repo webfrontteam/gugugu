@@ -44,11 +44,11 @@ App({
       wx.switchTab({
         url: '../party/homepage/homepage',
       })
-    }, 5000)
+    }, 2000)
   },
   globalData: {
     userInfo: null,
-    ip: "http://127.0.0.1:8080",
+    ip: "http://193.112.77.221:8080",
     token: null,
     ifTokenGet:false
   }

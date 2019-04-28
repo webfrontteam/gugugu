@@ -9,7 +9,7 @@ Page({
   /**
    * 页面的初始数据
    */
-  "data": {
+  data: {
     "name": null,
     "time": null,  // 聚会集合时间的时间戳
     "fee": null,  // 单人缴纳费用
@@ -17,7 +17,7 @@ Page({
     "members": "",
     "total":"",
     "count":0,
-    "partyId": "ef2bff0fc21f4335b4fb255f441c430d"
+    "party_id": null
   },
 
 
@@ -25,9 +25,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  //  this.setData({
-  //    partyId:options.partyId
-  //  })
+   this.setData({
+     party_id:options.party_id
+   })
    var that=this
     wx.request({
       url: app.globalData.ip + "/party/detail/",
@@ -38,7 +38,7 @@ Page({
         'token': app.globalData.token
       },
       data:{
-        "party_id": that.data.partyId
+        "party_id": that.data.party_id
       },
       success: function (res) {
         console.log("detail")
@@ -66,27 +66,7 @@ Page({
       }
     });
 
-    wx.request({
-      url: app.globalData.ip + "/party/detail/",
-      //app.globalData.ip + '/party/participate',
-      method: 'POST',
-
-      header: {
-        'token': app.globalData.token,
-        'Content-Type': application/x-www-form-urlencoded
-      },
-      data: {
-        "party_id": that.data.partyId,
-        "mode": that.data.mode
-      },
-      success: function (res) {
-        console.log("detail")
-      },
-      fail: function (res) {
-        console.log("fail")
-        console.log(res.data);
-      }
-    })
+    
   },
 
   /**
@@ -136,5 +116,36 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  manage:function(){
+    var that = this
+    wx.navigateTo({
+      url: '/pages/party/manage/manage?party_id=' + that.data.party_id,
+    })
+  },
+
+  openSign:function(){
+    var that = this
+    wx.request({
+      url: app.globalData.ip + "/party/chmod",
+      method: 'POST',
+
+      header: {
+        'token': app.globalData.token,
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        "party_id": that.data.party_id,
+        "mode": 1
+      },
+      success: function (res) {
+        console.log("open success")
+      },
+      fail: function (res) {
+        console.log("open fail")
+        console.log(res.data);
+      }
+    })
   }
 })
