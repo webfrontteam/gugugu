@@ -10,7 +10,9 @@
     "pages/party/detail/detail",
     "pages/mine/balance/balance",
     "pages/mine/minedetail/minedetail",
-    "pages/mine/withdraw/withdraw"
+    "pages/mine/withdraw/withdraw",
+    "pages/mine/moneydetail/moneydetail",
+    "pages/party/activity/activity"
   ],
   "window": {
     "backgroundTextStyle": "light",
