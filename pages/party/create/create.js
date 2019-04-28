@@ -172,7 +172,8 @@ Page({
         latitude: that.data.location.latitude,
         fee: that.data.fee,
         time: that.data.timestamp,
-        longtitude: that.data.location.longitude
+        longtitude: that.data.location.longitude,
+        place: that.data.location.name
       },
       success: function (res) {
         console.log("success")

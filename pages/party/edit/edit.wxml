@@ -5,11 +5,11 @@
   <view class="page__bd">
     <view class="weui-cells weui-cells_after-title">
       <view class="weui-cell">
-        <view class="weui-cell__bd">标题文字</view>
+        <view class="weui-cell__bd">活动名称</view>
         <view class="weui-cell__ft">说明文字</view>
       </view>
     </view>
-    <view class="weui-cells__title">日期</view>
+    <view class="weui-cells__title">日程</view>
     <view class="weui-cells weui-cells_after-title">
       <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__bd">活动日期</view>
@@ -24,7 +24,7 @@
         <view class="weui-cell__ft weui-cell__ft_in-access">银泰创意城</view>
       </navigator>
     </view>
-    <view class="weui-cells__title">押金</view>
+    <view class="weui-cells__title">报名</view>
     <view class="weui-cells weui-cells_after-title">
       <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__bd">咕咕押金</view>
@@ -32,7 +32,7 @@
       </navigator>
       <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__bd">押金瓜分方式</view>
-        <view class="weui-cell__ft weui-cell__ft_in-access">拼手气红包:00</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">拼手气红包</view>
       </navigator>
     </view>
   </view>

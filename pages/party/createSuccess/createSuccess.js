@@ -13,11 +13,7 @@ Page({
     name: null,
     timestamp: null,
     time: null,
-    location: {
-      longitude: null,
-      latitude: null,
-      name: "银泰创意城"
-    },
+    plcae: null,
 
   },
 
@@ -39,8 +35,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     that.setData({
-      party_id: 'ef2bff0fc21f4335b4fb255f441c430d'
-      // party_id: options.party_id
+      party_id: options.party_id
     })
     // console.log(that.data.party_id)
   },
@@ -73,7 +68,7 @@ Page({
         that.setData({
           name: res.data.data.name,
           timestamp: res.data.data.time,
-          // location.name:
+          place: res.data.data.place
         })
         that.setData({
           time: util.tsFormatTime(that.data.timestamp, 'Y-M-D h:m')
