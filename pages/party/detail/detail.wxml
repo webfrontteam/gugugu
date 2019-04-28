@@ -12,12 +12,12 @@
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">活动</view>
                     <!-- 需要接口 -->
-                    <view class="weui-form-preview__value">聚会</view>
+                    <view class="weui-form-preview__value">{{name}}</view>
                 </view>
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">时间</view>
                     <!-- 需要接口 -->
-                    <view class="weui-form-preview__value">2019年8月2日 12：00</view>
+                    <view class="weui-form-preview__value">{{time}}</view>
                 </view>
                 <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">地点</view>
@@ -25,14 +25,9 @@
                     <view class="weui-form-preview__value">银泰创意城</view>
                 </view>
                 <view class="weui-form-preview__item">
-                    <view class="weui-form-preview__label">报名截止</view>
-                    <!-- 需要接口 -->
-                    <view class="list__value1">2018年8月1日 12：00</view>
-                </view>
-                <view class="weui-form-preview__item">
                     <view class="list__label3">咕咕押金</view>
                     <!-- 需要接口 -->
-                    <view class="list__label4">6.66</view>
+                    <view class="list__label4">{{fee}}</view>
                     <view class="list__value2">元</view>
                 </view>
                  <view class="weui-form-preview__item">
@@ -43,7 +38,7 @@
                  <view class="weui-form-preview__item">
                     <view class="weui-form-preview__label">创建者</view>
                     <!-- 需要接口 -->
-                    <view class="weui-form-preview__value">Jarvis</view>
+                    <view class="weui-form-preview__value">{{leader}}</view>
                 </view> 
             </view>
         </view>
@@ -58,9 +53,9 @@
           <!-- <view class="homepage__text_start" wx:if="{{isOpened}}">签到未开启<iew> -->
           <view class="homepage__text_start" >签到未开启</view>
           <!-- 需要接口 -->
-          <view class="homepage__label">0/</view>
+          <view class="homepage__label">{{count}}/</view>
           <!-- 需要接口 -->
-          <view class="homepage__label">8</view>
+          <view class="homepage__label">{{total}}</view>
           <button class="homepage__btn__small" type="default" disabled="true">签到</button>
         </view>
         <view class="weui-cell">

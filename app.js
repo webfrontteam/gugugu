@@ -40,8 +40,8 @@ App({
     })
     //跳转
     setTimeout(function () {
-      wx.switchTab({
-        url: '../party/homepage/homepage',
+      wx.redirectTo({
+        url: '../party/detail/detail',
       })
     }, 2000)
   },
