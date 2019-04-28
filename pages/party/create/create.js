@@ -38,7 +38,6 @@ Page({
     this.setData({
       name: e.detail.value
     })
-    console.log(name);
   },
   mapView: function () {
     var that = this
