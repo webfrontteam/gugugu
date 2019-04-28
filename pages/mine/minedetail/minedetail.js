@@ -8,6 +8,18 @@ Page({
 
   },
 
+  billdetail: function (options) {
+    wx.navigateTo({
+      url: '/pages/mine/balance/balance',
+    })
+  },
+
+  balance: function (options) {
+    wx.navigateTo({
+      url: '/pages/mine/balance/balance',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
