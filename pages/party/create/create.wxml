@@ -31,11 +31,11 @@
       </navigator>
       <navigator bindtap='mapView' url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
         <view class="weui-cell__bd">活动地点</view>
-        <view wx:if="{{location.name==null}}">
+        <view wx:if="{{place==null}}">
           <view class="weui-cell__ft weui-cell__ft_in-access">请选择活动地点</view>
         </view>
         <view wx:else>
-          <view class="weui-cell__ft weui-cell__ft_in-access">{{ location.name }}</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access">{{ place }}</view>
         </view>
       </navigator>
     </view>
