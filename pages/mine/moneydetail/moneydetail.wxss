@@ -1,7 +1,7 @@
 /* pages/mine/moneydetail/moneydetail.wxss */
 /* .weui-form-preview__hd{line-height:2em} */
 
-.weui-form-preview__hd{position:relative;padding:10px 15px;text-align:right;line-height:2em}.weui-form-preview__hd:after{content:" ";position:absolute;left:0;bottom:0;right:0;height:1px;border-bottom:1rpx solid #d9d9d9;color:#d9d9d9;left:15px}
+.weui-form-preview__hd{padding:10px 15px;line-height:2em}
 
 .weui-form-preview__label{color:#000000}
 
