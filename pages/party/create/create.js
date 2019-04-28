@@ -178,10 +178,9 @@ Page({
       success: function (res) {
         console.log("success")
         console.log(res.data)
-        // console.log(res.data.data.paty_id)
-        //party少了r
+        // console.log(res.data.data.party_id)
         that.setData({
-          party_id: res.data.data.paty_id
+          party_id: res.data.data.party_id
         })
       },
       fail: function (res) {

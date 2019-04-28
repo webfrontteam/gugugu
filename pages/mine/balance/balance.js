@@ -8,6 +8,12 @@ Page({
 
   },
 
+  billdetail: function (options) {
+    wx.navigateTo({
+      url: '/pages/mine/moneydetail/moneydetail',
+    })
+  },
+
   withdraw: function (options) {
     wx.navigateTo({
       url: '/pages/mine/withdraw/withdraw',

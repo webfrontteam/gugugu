@@ -14,30 +14,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-
-    wx.request({
-      url: that.globalData.ip + '/account/transaction',
-      method: 'GET',
-      header: {
-        'token': 'application/x-www-form-urlencoded'
-      },
-      data: {
-        code: code,
-        name: that.globalData.userInfo.nickName,
-        header: that.globalData.userInfo.avatarUrl
-      },
-      success: function (res) {
-        console.log("success")
-        console.log(res.data)
-        that.globalData.token = res.data.data.token
-        // console.log(res.data.data.token)
-      },
-      fail: function (res) {
-        console.log("fail")
-        console.log(res.data);
-      }
-    })
 
   },
 
@@ -52,6 +28,27 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    
+    wx.request({
+      url: app.globalData.ip + "/account/transaction",
+      method: 'GET',
+      header: {
+        // 'content-type': 'application/x-www-form-urlencoded',
+        'token': app.globalData.token
+      },
+      // data: {
+      //   'start': 1,
+      //   'count': 5
+      // },
+      success(res) {
+        console.log("moneydetailsuccess")
+        console.log(res.data);
+      },
+      fail: function (res) {
+        console.log("fail")
+        console.log(res.data);
+      }
+    })
 
   },
 
