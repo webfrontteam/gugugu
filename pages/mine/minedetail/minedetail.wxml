@@ -1,9 +1,9 @@
 <!--pages/mine/minedetail/minedetail.wxml-->
 <view class="page">
   <view class="page__minedetail">
-    <image class="maindetail_userimage" src="../../../image/weixinicon.png"></image>
+    <image class="maindetail_userimage" src="{{header}}"></image>
     <view class='minedetail_text'>
-      <view class="minedetail_username">Jarvis</view>
+      <view class="minedetail_username">{{username}}</view>
       <view class="minedetail_usernum">1818888888888</view>
     </view>
   </view>
@@ -11,7 +11,7 @@
   <button class="withdraw_btn" bindtap='balance'>
   <image class='withdraw_btn_image' src='../../../image/weixinicon.png'></image>
   <view class='withdraw_text'>余额</view>
-  <view class='withdraw_money'>8.60元</view>
+  <view class='withdraw_money'>{{score}}元</view>
   <view class="weui-cell__ft weui-cell__ft_in-access" ></view>
   </button>
 
