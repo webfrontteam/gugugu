@@ -45,9 +45,6 @@ Page({
           longitude: res.longitude,
           latitude: res.latitude,
           place: res.name,
-          // detail_info: res.address,
-          // wd: res.latitude,
-          // jd: res.longitude
         })
       },
       fail: function () {

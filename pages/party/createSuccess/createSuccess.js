@@ -25,11 +25,11 @@ Page({
 
   detail:function(options){
     var that = this
-    setTimeout(function () {
+    // setTimeout(function () {
       wx.navigateTo({
         url: '/pages/party/detail/detail?party_id=' + that.data.party_id,
       })
-    }, 1500)
+    // }, 1500)
   },
 
   /**
@@ -40,7 +40,7 @@ Page({
     that.setData({
       party_id: options.party_id
     })
-    // console.log(that.data.party_id)
+    console.log("party_id:" + that.data.party_id)
   },
 
   /**
