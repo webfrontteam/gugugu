@@ -6,7 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list:null,
+    start:0,
+    count:5,
   },
 
   creatParty: function(options){
@@ -33,6 +35,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var that = this;
     wx.request({
       url: app.globalData.ip +"/party/list",
       method: 'GET',
@@ -41,13 +44,16 @@ Page({
         'token':app.globalData.token,
       },
       data: {
-        'start':1,
-        'count':5
+        'start':that.data.start,
+        'count':that.data.count
       },
       success(res) {
-        console.log("fe")
-      }
+        that.setData({
+          list: res.data.data.parties
+        })
+      },
     })
+    
 
   },
 
@@ -69,14 +75,34 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+   
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    var that = this;
+    wx.request({
+      url: app.globalData.ip + "/party/list",
+      method: 'GET',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'token': app.globalData.token,
+      },
+      data: {
+        'start': that.data.start+that.data.count,
+        'count': that.data.count
+      },
+      success(res) {
 
+        var newList = that.data.list.concat(res.data.parties);
+        that.setData({
+          start: that.data.start + that.data.count,
+          list:newList
+        })
+      },
+    })
   },
 
   /**
