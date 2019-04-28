@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    "members": "",
   },
 
   /**
@@ -40,6 +40,31 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+    var that = this
+    wx.request({
+      url: app.globalData.ip + "/party/detail/",
+      //app.globalData.ip + '/party/participate',
+      method: 'GET',
+
+      header: {
+        'token': app.globalData.token
+      },
+      data: {
+        "party_id": that.data.partyId
+      },
+      success: function (res) {
+        console.log("detail")
+        console.log(res.data.data.members.length);
+        that.setData({
+          members: res.data.data.members,
+        })
+
+      },
+      fail: function (res) {
+        console.log("fail")
+        console.log(res.data);
+      }
+    })
 
   },
 

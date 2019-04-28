@@ -4,31 +4,23 @@
   </view>
   <view class="page__bd">
     <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell">
-        <view class="weui-cell__hd">
-          <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+      <view wx:for="{{members}}" wx:key="">
+        <view class="weui-cell">
+          <view class="weui-cell__hd">
+            <image src="{{item.header}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+          </view>
+          <view class="weui-cell__bd">{{item.username}}</view>
+          <view wx:if="{{item.status!=0}}" class="weui-cell__ft">已签到</view>
+          <view wx:else>
+            <view class="weui-cell__ft">
+              <button class="weui-btn mini-btn" type="default" size="mini">签到</button>
+            </view>
+            <view class="weui-cell__ft">
+              未签到
+            </view>
+          </view>
         </view>
-        <view class="weui-cell__bd">Jarvis</view>
-        <view class="weui-cell__ft">已签到</view>
-      </view>
-      <view class="weui-cell">
-        <view class="weui-cell__hd">
-          <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-        </view>
-        <view class="weui-cell__bd">Jarvis</view>
-        <view class="weui-cell__ft">已签到</view>
-      </view>
-      <view class="weui-cell">
-        <view class="weui-cell__hd">
-          <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-        </view>
-        <view class="weui-cell__bd">Jarvis</view>
-        <view class="weui-cell__ft">
-          <button class="weui-btn mini-btn" type="default" size="mini">签到</button>
-        </view>
-        <view class="weui-cell__ft">
-          未签到
-        </view>
+
       </view>
       <view class="weui-cell">
         <view class="weui-cell__hd">
@@ -45,14 +37,14 @@
     </view>
   </view>
   <view class="page__bd page__bd_spacing">
-    <button class="weui-btn" >截止签到 </button>
+    <button class="weui-btn">截止签到 </button>
   </view>
   <view class="weui-cell">
     <view class="weui-cell__bd">
-      <button class="bottom-btn1" >编辑成员</button>
+      <button class="bottom-btn1">编辑成员</button>
     </view>
     <view class="weui-cell__ft">
-      <button class="bottom-btn2" >查看账单</button>
+      <button class="bottom-btn2">查看账单</button>
     </view>
   </view>
 </view>
