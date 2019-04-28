@@ -10,6 +10,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    party_id: "",
     hasLocation: false,
     name: "聚会",
     fee: "",
@@ -158,23 +159,39 @@ Page({
     })
     console.log(that.data.fee)
     console.log(that.data.name)
-    console.log(app.globalData.ip + '/party/launch?name=' + that.data.name + '&latitude=' + that.data.location.latitude + '&fee=' + that.data.fee + '&time=' + that.data.timestamp + '&longtitude=' + that.data.location.longitude)
 
     //提交数据
     wx.request({
-      url: app.globalData.ip + '/party/launch?name=' + that.data.name + '&latitude=' + that.data.location.latitude + '&fee=' + that.data.fee + '&time=' + that.data.timestamp + '&longtitude=' + that.data.location.longitude,
+      url: app.globalData.ip + '/party/launch',
       method: 'POST',
       header: {
+        'content-type': 'application/x-www-form-urlencoded',
         'token': app.globalData.token
+      },
+      data: {
+        name: that.data.name,
+        latitude: that.data.location.latitude,
+        fee: that.data.fee,
+        time: that.data.timestamp,
+        longtitude: that.data.location.longitude
       },
       success: function (res) {
         console.log("success")
         console.log(res.data)
+        // console.log(res.data.data.paty_id)
+        //party少了r
+        that.setData({
+          party_id: res.data.data.paty_id
+        })
+      },
+      fail: function (res) {
+        console.log("fail")
+        console.log(res.data);
       }
     })
 
     wx.navigateTo({
-      url: '/pages/party/createSuccess/createSuccess',
+      url: '/pages/party/createSuccess/createSuccess?party_id=' + that.data.party_id,
     })
   },
 

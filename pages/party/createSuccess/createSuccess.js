@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    party_id: ""
   },
 
   backToHomepage: function(options){
@@ -24,7 +24,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this;
+    that.setData({
+      party_id: options.party_id
+    })
   },
 
   /**
