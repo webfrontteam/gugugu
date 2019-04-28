@@ -1,0 +1,42 @@
+<!--pages/mine/moneydetail/moneydetail.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">高中同学聚会</view>
+                    <view class="weui-form-preview__value_in-hd_ok">+6.59</view>
+                    <view class="weui-form-preview__label2">2019-04-21 18:46:37</view>
+                </view>
+            </view>
+
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">高中同学聚会</view>
+                    <view class="weui-form-preview__value_in-hd">-5.00</view>
+                    <view class="weui-form-preview__label2">2019-04-21 18:46:37</view>
+                </view>
+            </view>
+            
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">高中同学聚会</view>
+                    <view class="weui-form-preview__value_in-hd_ok">+6.59</view>
+                    <view class="weui-form-preview__label2">2019-04-21 18:46:37</view>
+                </view>
+            </view>
+            
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">高中同学聚会</view>
+                    <view class="weui-form-preview__value_in-hd">-5.00</view>
+                    <view class="weui-form-preview__label2">2019-04-21 18:46:37</view>
+                </view>
+            </view>
+
+        </view>
+        
+    </view>
+
+
+</view>
