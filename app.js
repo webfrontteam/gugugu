@@ -43,7 +43,7 @@ App({
       wx.switchTab({
         url: '../party/homepage/homepage',
       })
-    }, 2000)
+    }, 5000)
   },
   globalData: {
     userInfo: null,

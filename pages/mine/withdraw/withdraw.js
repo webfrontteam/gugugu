@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    score: 0,
+    header: ""
   },
 
   /**
@@ -27,20 +28,20 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    var that = this
     wx.request({
-      url: app.globalData.ip + "/account/transaction",
+      url: app.globalData.ip + "/account/detail",
       method: 'GET',
       header: {
-        // 'content-type': 'application/x-www-form-urlencoded',
         'token': app.globalData.token
       },
-      // data: {
-      //   'start': 1,
-      //   'count': 5
-      // },
       success(res) {
-        console.log("balancesuccess")
+        console.log("detailsuccess")
         console.log(res.data);
+        that.setData({
+          score: res.data.data.score,
+          header: res.data.data.header
+        })
       },
       fail: function (res) {
         console.log("fail")
