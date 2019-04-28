@@ -1,79 +1,49 @@
 <!--pages/party/activity/activity.wxml-->
 <view class="page">
-    <view class="page__bd">
-        <view class="weui-tab">
-            <view class="weui-navbar">
-                <block wx:for="{{tabs}}" wx:key="*this">
-                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
-                        <view class="weui-navbar__title">{{item}}</view>
-                    </view>
-                </block>
-                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
-            </view>
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
 
-            <view class="weui-tab__panel">
-                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
 
-                  <view class="weui-panel weui-panel_access">
-                    <view class="weui-form-preview">
-                      <view class="weui-form-preview__hd">
-                        <view class="weui-form-preview__item">
-                            <view class="weui-form-preview__label">聚会</view>
-                            <view class="weui-form-preview__value_in-hd_being">正在签到</view>
-                            <view class="weui-form-preview__label">2019年8月2日 12:00</view>
-                            <view class="weui-form-preview__value_in-hd_ok">
-                              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                              </navigator>
-                            </view>
-                            <view class="weui-form-preview__label2">银泰创意城</view>
-                        </view>
-                      </view>
+      <view wx:for="{{list}}" wx:key="">
+        <view class="weui-tab__panel" id='{{item.partyId}}' bindtap='detialButton'>
+          <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+
+            <view class="weui-panel weui-panel_access">
+              <view class="weui-form-preview">
+                <view class="weui-form-preview__hd">
+                  <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">{{item.partySubject}}</view>
+                    {{item.mode}}
+                    <view class="weui-form-preview__value_in-hd_being" wx:if="{{item.mode==1}}">正在签到</view>
+                    <view class="weui-form-preview__value_in-hd_notbeing" wx:if="{{item.mode==2}}">未开启签到</view>
+                    <view class="weui-form-preview__value_in-hd_notbeing" wx:if="{{item.mode==3}}">活动结束</view>
+                    <view class="weui-form-preview__value_in-hd_notbeing" wx:if="{{item.mode==0}}">活动未开启</view>
+                    <view class="weui-form-preview__label">{{item.partyDate}}</view>
+                    <view class="weui-form-preview__value_in-hd_ok">
+                      <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                      </navigator>
                     </view>
+                    <view class="weui-form-preview__label2">{{item.place}}</view>
                   </view>
-
-                  <view class="weui-panel weui-panel_access">
-                    <view class="weui-form-preview">
-                      <view class="weui-form-preview__hd">
-                        <view class="weui-form-preview__item">
-                            <view class="weui-form-preview__label">聚会</view>
-                            <view class="weui-form-preview__value_in-hd_notbeing">活动未开启</view>
-                            <view class="weui-form-preview__label">2019年8月2日 12:00</view>
-                            <view class="weui-form-preview__value_in-hd_ok">
-                              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                              </navigator>
-                            </view>
-                            <view class="weui-form-preview__label2">银泰创意城</view>
-                        </view>
-                      </view>
-                    </view>
-                  </view>
-
-                  <view class="weui-panel weui-panel_access">
-                    <view class="weui-form-preview">
-                      <view class="weui-form-preview__hd">
-                        <view class="weui-form-preview__item">
-                            <view class="weui-form-preview__label">聚会</view>
-                            <view class="weui-form-preview__value_in-hd_notbeing">活动未开启</view>
-                            <view class="weui-form-preview__label">2019年8月2日 12:00</view>
-                            <view class="weui-form-preview__value_in-hd_ok">
-                              <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                              </navigator>
-                            </view>
-                            <view class="weui-form-preview__label2">银泰创意城</view>
-                        </view>
-                      </view>
-                    </view>
-                  </view>
-
                 </view>
-
-                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
-                <view class="weui-tab__content" hidden="{{activeIndex != 3}}">选项四的内容</view>
+              </view>
             </view>
+          </view>
         </view>
+
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 3}}">选项四的内容</view>
+      </view>
     </view>
+  </view>
 </view>
