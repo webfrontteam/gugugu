@@ -23,12 +23,6 @@ Page({
     longitude: null,
     latitude: null,
     place: null,
-    // location: {
-    //   longitude: null,
-    //   latitude: null,
-    //   name: null,
-    //   address: null
-    // },
     dateTimeArray: null,
     dateTime: null,
     dateTimeArray1: null,
@@ -51,23 +45,14 @@ Page({
         that.setData({
           longitude: res.longitude,
           latitude: res.latitude,
-          plcae: res.name,
-          // location: {
-          //   longitude: res.longitude,
-          //   latitude: res.latitude,
-          //   address: res.address,
-          //   name: res.name
-          // },
-          detail_info: res.address,
-          wd: res.latitude,
-          jd: res.longitude
+          place: res.name,
+          // detail_info: res.address,
+          // wd: res.latitude,
+          // jd: res.longitude
         })
       },
       fail: function () {
-        // fail
-      },
-      complete: function () {
-        // complete
+        console.log("location: fail")
       }
     })
   },

@@ -18,15 +18,18 @@ Page({
   },
 
   backToHomepage: function(options){
-    wx.navigateTo({
-      url: '/pages/party/homepage/homepage',
+    wx.switchTab({
+      url: '../homepage/homepage',
     })
   },
 
   detail:function(options){
-    wx.navigateTo({
-      url: '/pages/party/detail/detail',
-    })
+    var that = this
+    setTimeout(function () {
+      wx.navigateTo({
+        url: '/pages/party/detail/detail?party_id=' + that.data.party_id,
+      })
+    }, 1500)
   },
 
   /**
