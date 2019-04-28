@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -90,6 +90,21 @@
 					"id": -1,
 					"name": "activity",
 					"pathName": "pages/party/activity/activity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "moneydetail",
+					"pathName": "pages/mine/moneydetail/moneydetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "minedetail",
+					"pathName": "pages/mine/minedetail/minedetail",
+					"query": "",
 					"scene": null
 				}
 			]
