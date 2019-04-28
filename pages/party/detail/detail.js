@@ -1,22 +1,68 @@
 // pages/party/detail/detail.js
 
 var app = getApp()
+var util = require('../../../utils/util.js');
+
 
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
-
+  "data": {
+    "name": null,
+    "time": null,  // 聚会集合时间的时间戳
+    "fee": null,  // 单人缴纳费用
+    "leader": null,  // 用于在参与者列表中突出显示盟主
+    "members": "",
+    "total":"",
+    "count":0,
+    "partyId": "ef2bff0fc21f4335b4fb255f441c430d"
   },
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+  //  this.setData({
+  //    partyId:options.partyId
+  //  })
+   var that=this
+    wx.request({
+      url: app.globalData.ip + "/party/detail/",
+      //app.globalData.ip + '/party/participate',
+      method: 'GET',
+     
+      header: {
+        'token': app.globalData.token
+      },
+      data:{
+        "party_id": that.data.partyId
+      },
+      success: function (res) {
+        console.log("detail")
+        console.log(res.data.data.members.length);
+        for (var j = 0, len = res.data.data.members.length; j < len; j++) {
+          if (res.data.data.members[j].status!=0){
+            count++;
+          }
+        }
+        that.setData({
+          name: res.data.data.name,
+          time: util.tsFormatTime(res.data.data.time, 'Y-M-D h:m'),
+          fee: res.data.data.fee,
+          leader: res.data.data.leader,
+          members: res.data.data.members,
+          total:res.data.data.members.length
+        })
 
+      },
+      fail: function (res) {
+        console.log("fail")
+        console.log(res.data);
+      }
+    })
   },
 
   /**
@@ -30,22 +76,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    wx.request({
-      url: 'http://127.0.0.1:8080/party/participate?party_id=16A81VP',
-      //app.globalData.ip + '/party/participate',
-      method: 'GET',
-      header: {
-        'token': app.globalData.token
-      },
-      success: function (res) {
-        console.log("detail")
-        console.log(res.data)
-      },
-      fail: function (res) {
-        console.log("fail")
-        console.log(res.data);
-      }
-    })
+   
   },
 
   /**
